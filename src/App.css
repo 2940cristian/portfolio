@@ -1,0 +1,21 @@
+/* STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+header {
+  background-color: rgb(233, 213, 221);
+  height: 100vh;
+}
+
+header h1 {
+  color: rgb(136, 102, 96);
+}
+
+
+/* RESPONSIVE CSS */
+
+
+/* ANIMATIONS */
