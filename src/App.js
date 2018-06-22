@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Typist from "react-typist";
-import headerImg from "./laptop1.jpg";
+import headerImg from "./Images/laptop1.jpg";
+import beachBoy from "./Images/beachBoy.jpg";
 
 class App extends Component {
   constructor() {
@@ -43,6 +44,13 @@ class App extends Component {
       </header>
 
       
+      <section id="about">
+        {/* <h3>About me</h3> */}
+        <div className="about__textContainer">
+          <img className="about__img" src={beachBoy} />
+          <h4 className="about__info">Officia labore exercitation proident sint aliquip sit proident. Ea mollit ullamco Lorem proident ea. Labore ea adipisicing Lorem labore laborum exercitation commodo aliqua anim aliqua eiusmod est incididunt sint. Est nisi aute laborum elit ea ad duis eu eiusmod in est aute. Consectetur consequat duis sint aliqua cillum veniam voluptate. Officia do non consequat et ipsum. Duis excepteur incididunt culpa ullamco id voluptate ipsum incididunt magna in irure Lorem.</h4>
+        </div>
+      </section>
       </div>
     );
   }

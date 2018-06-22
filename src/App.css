@@ -39,11 +39,32 @@ header h2 {
   max-width: 100%;
 }
 
-/* header h2 span {
-  padding-right: 3%;
-  margin-left: 25%;
-} */
+#about {
+  margin-top: 5%;
+  margin-bottom: 5%;
 
+}
+
+.about__textContainer {
+  display: flex;
+  /* margin: 0 50% 0 5%; */
+}
+
+.about__info {
+  color: rgb(160, 149, 149);
+  width: 40%;
+  text-align: right;
+  margin-left: 7%;
+  font-size: 1.3rem;
+  margin-top: 4%;
+}
+
+.about__img {
+  width: 40%;
+  background-color: red;
+  margin-left: 7%;
+  height: 100%;
+}
 
 
 /* RESPONSIVE CSS */
