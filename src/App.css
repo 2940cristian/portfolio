@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+/* VARIABLES */
+
+:root {
+  --main-red-color: rgb(168, 47, 36);
+  --main-brightGrey-color: grey;
+}
+
 /* STYLING */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900
 }
 
 .header__textContainer {
@@ -13,7 +26,7 @@
 }
 
 header h1 {
-  color: rgb(160, 141, 139);
+  color: rgb(179, 144, 131);
   font-size: 10vh;
   margin-bottom: 3%; 
   position: relative;
@@ -25,7 +38,7 @@ header h1 {
 }
 
 header h2 {
-  color: rgb(173, 151, 151);
+  color: rgb(179, 144, 131);
   position: relative;
   font-size: 6vh;
   top: 5%;
@@ -39,32 +52,178 @@ header h2 {
   max-width: 100%;
 }
 
+
+
 #about {
-  margin-top: 5%;
-  margin-bottom: 5%;
-
+  margin: 10% 0 10% 0;
+  height: 100vh;
 }
 
-.about__textContainer {
+.about__header {
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+}
+
+.about__content {
   display: flex;
-  /* margin: 0 50% 0 5%; */
 }
 
-.about__info {
-  color: rgb(160, 149, 149);
-  width: 40%;
-  text-align: right;
-  margin-left: 7%;
+.about__header h1 {
+  margin-bottom: 8%;
+  font-size: 3.5rem;
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.about__header p {
   font-size: 1.3rem;
-  margin-top: 4%;
 }
 
-.about__img {
-  width: 40%;
-  background-color: red;
-  margin-left: 7%;
+.about__list {
+  width: 33%;
+  font-size: 1.7rem;
+  margin: 5% 2% 0% 2%;
+}
+
+.about__list-contact {
+  border-bottom: 1px solid grey;
+  color: var(--main-red-color);
+  list-style: none;
+  padding: 6%;
+}
+
+.about__list-span {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.7);
+  float: right;
+}
+
+.about__image {
+  height: 25rem;
+  position: relative;
+  left: 5rem;
+  top: 3rem;
+  width: 23%;
+}
+
+
+.Typist .Cursor {
+  display: inline;
+  opacity: 1;
+  animation: blink 1s linear infinite;
+}
+
+img {
+  width: 50%;
   height: 100%;
 }
+
+.projects__header {
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--main-red-color);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project {
+  display: flex;
+  margin: 3%;
+}
+
+.project p {
+  width: 40%;
+  font-size: 1.3rem;
+  color: var(--main-brightGrey-color);
+  margin-top: 2%;
+}
+
+#project__left {
+  justify-content: flex-start
+}
+
+#project__left img {
+  margin-right: 5%;
+}
+
+#project__right {
+  justify-content: flex-end;
+}
+
+#project__right img {
+  margin-left: 5%;
+}
+
+#projects {
+  background-color: rgb(233, 232, 232);
+  max-width: 100%;
+  width: 95%;
+  margin: 5% auto;
+  padding: 3% 0;
+}
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.99);
+  font-size: 1.8rem;
+  padding: 3% 0;
+  color: rgb(112, 112, 112);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  padding: 3% 0 5% 0;
+}
+
+#form textarea {
+  width: 100%;
+  height: 10rem;
+  margin: 0 auto;
+  margin-top: 5%;
+  font-size: 1.2rem;
+}
+
+#form textarea::placeholder {
+  font-size: 1.2rem;
+}
+#form button {
+  background-color: var(--main-red-color);
+  border: none;
+  cursor: pointer;
+  margin-top: 5%;
+  height: 3rem;
+}
+
+#contact__other {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__card {
+  margin: 0 3%;
+  width: 100%;
+  text-align: center;
+}
+
+.contact__card img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.contact__card h3 {
+  color: var(--main-red-color);
+}
+
+footer p {
+  font-size: 1.4rem;
+  background-color: black;
+  color: rgb(165, 165, 165);
+  text-align: center;
+  padding: 3%;
+}
+
 
 
 /* RESPONSIVE CSS */
@@ -112,4 +271,10 @@ header h2 {
   to {
     opacity: 1;
   }
+}
+
+@keyframes blink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
