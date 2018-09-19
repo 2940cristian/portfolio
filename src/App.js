@@ -17,7 +17,8 @@ class App extends Component {
     this.state = {
       h2: none,
       content: "",
-      width: 0
+      width: 0,
+      show: none,
     }
     this.changeStyle = this.changeStyle.bind(this)
   }
@@ -29,12 +30,12 @@ class App extends Component {
     })
     window.addEventListener("resize", () => {this.setState({window: window.innerWidth})})
 
-    // Axios.get("https://portfolio-mail1.herokuapp.com/wakeup")
-    // .then(Response => {
-    //   console.log(Response)
-    // }).catch(err => {
-    //   alert("My server appears to have crashed, sorry about the inconvenience, bugs occur sadly")
-    // })
+    Axios.get("https://portfolio-mail1.herokuapp.com/wakeup")
+    .then(Response => {
+      console.log(Response)
+    }).catch(err => {
+      alert("My server appears to have crashed, sorry about the inconvenience, bugs occur sadly")
+    })
   }
   changeStyle() {
     this.setState({
@@ -51,11 +52,44 @@ class App extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
+    if(this.state.content.length < 1) return;
+
+    this.handleShow()
+
+    Axios.post("https://portfolio-mail1.herokuapp.com/", {content: this.state.content})
+    .then(response => {
+      console.log(response)
+      this.setState({
+        content: " "
+      })
+    }).catch(err => {
+      console.log(err)
+    })
+
+  }
+
+  handleShow() {
+    if(this.state.show == none) {
+      this.setState({
+        show: ""
+      })
+    }
+
+    else {
+      this.setState({
+        show: none
+      })
+    }
   }
   
   render() {
     return (this.state.window >= 700) ? (
       <div className="body">
+
+      <div style={this.state.show} className="modal">
+      <p>Message Sent</p>
+      <button>OK</button>
+      </div>
       
       <header>
         <div id="responsive-header">
@@ -129,9 +163,9 @@ class App extends Component {
       </section>
 
       <section id="contact">
-      <form id="form" method="post" action="mailto:2940cristian@gmail.com">
+      <form onSubmit={this.handleSubmit} id="form">
           <p>Let's get in touch. Please leave your name along with either your email, phone number, or any other contact method. Will respond as quickly as possible</p>
-          <textarea onChange={this.onChange} type="text" name="content" placeholder="Ex: Hey, my name is John Doe and i'm messaging you because ...... please conact me at ...."/>
+          <textarea onChange={this.onChange} value={this.state.content} type="text" name="content" value={this.state.content} placeholder="Ex: Hey, my name is John Doe and i'm messaging you because ...... please conact me at ...."/>
           <button type="submit">Submit</button>
       </form>
 
@@ -238,7 +272,7 @@ class App extends Component {
       </section>
 
       <section id="contact">
-      <form id="form" method="post" action="mailto:2940cristian@gmail.com">
+      <form onSubmit={this.handleSubmit} id="form">
           <p>Let's get in touch. Please leave your name along with either your email, phone number, or any other contact method. Will respond as quickly as possible</p>
           <textarea onChange={this.onChange} type="text" name="content" placeholder="Ex: Hey, my name is John Doe and i'm messaging you because ...... please conact me at ...."/>
           <button type="submit">Submit</button>
