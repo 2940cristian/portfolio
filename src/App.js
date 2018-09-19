@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Typist from "react-typist";
 import headerImg from "./Images/laptop1.jpg";
-import beachBoy from "./Images/beachBoy.jpg"
-import skilltest from "./Images/skilltest.png";
+import mentrship from "./Images/mentrship.png";
 import picme from "./Images/picme.png";
 import phone from "./Images/phone.png";
 import email from "./Images/email.png";
@@ -56,7 +55,9 @@ class App extends Component {
       <div className="body">
       
       <header>
-        <img className="header__img" src={headerImg} alt="Background with tech"/>
+        <div id="responsive-header">
+          <img className="header__img" src={headerImg} alt="Background with tech"/>
+        </div>
         <div className="header__textContainer">
           <h1>Hey, I'm Cristian.</h1>
           <h2 style={this.state.h2} > <span>And I'm a....</span>
@@ -74,14 +75,15 @@ class App extends Component {
       <section id="about">
         <div className="about__header">
           <h1>A little about me</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque neque urna, commodo et metus sit amet, ultrices dapibus nibh. Nam elementum sit amet nisi pharetra condimentum. Nullam at sollicitudin risus. Sed ac semper urna, in suscipit eros. Nulla at metus ut nibh semper bibendum sed in nulla. Sed accumsan vitae est sit amet accumsan.</p>
+          <p>Hard-working Full-Stack Web developer with a passion for creating solutions.  Experienced with all stages of development from creation to deployment. 
+            Worked on multiple projects in a team environment where we utilized Scrum and Agile methodologies to meet short deadlines. </p>
         </div>
 
         <div className="about__content">
             <div className="about__list">
               <ul>
                 <li className="about__list-contact">Name: <span className="about__list-span">Cristian Garcia</span> </li>
-                <li className="about__list-contact">Age: <span className="about__list-span">19 years</span> </li>
+                <li className="about__list-contact age-responsive">Age: <span className="about__list-span">20 years</span> </li>
                 <li className="about__list-contact">Email: <span className="about__list-span">2940cristian@gmail.com</span> </li>
                 <li className="about__list-contact">Phone: <span className="about__list-span">760-889-6247</span> </li>
               </ul>
@@ -112,9 +114,9 @@ class App extends Component {
             </div>
 
             <div className="project" id="project__left">
-              <img src={skilltest} alt="A web application for quizzing applicants"/>
-              <p><span id="project__left-WIP">(W.I.P)</span> 
-                MentrShip(not a typo), is a project being built by a team of 6 volunteers. We have the hopes of it being a 
+              <img src={mentrship} alt="A web application for quizzing applicants"/>
+              <p><span id="project__left-WIP">(W.I.P) </span> 
+                MentrShip, is a project being built by a team of 6 volunteers. We have the hopes of it being a 
                 completely free site where users can recieve mentorship from those who would like to offer their aid. 
                 <br></br>
                 <br></br>
@@ -134,7 +136,7 @@ class App extends Component {
         <div className="contact__card">
           <img src={location}/>
           <h3>Located AT:</h3>
-          <p>Some part in Southern California</p>
+          <p>Southern California</p>
         </div>
 
         <div className="contact__card">
