@@ -508,7 +508,6 @@ footer p {
   }
 
   #contact__other .contact__card:nth-of-type(2) p {
-    background-color: blue;
     position: relative;
     top: 20%;
   }
