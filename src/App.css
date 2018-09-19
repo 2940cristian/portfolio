@@ -93,7 +93,6 @@ header h2 {
 
 #about {
   margin: 10% 0 10% 0;
-  height: 100vh;
 }
 
 .about__header {
@@ -510,9 +509,20 @@ footer p {
     position: relative;
     top: 20%;
   }
+
+  .about__list-contact {
+    font-size: .8rem;
+  }
 }
 
 /* HEIGHT MEDIA QUERIES */
+
+@media(max-height: 850px) {
+  #about {
+    margin-bottom: 0%;
+    padding-bottom: 0;
+  }
+}
 
 @media(max-height: 600px) {
   #projects {
