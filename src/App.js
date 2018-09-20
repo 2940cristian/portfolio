@@ -95,8 +95,8 @@ class App extends Component {
               <ul>
                 <li className="about__list-contact">Name: <span className="about__list-span">Cristian Garcia</span> </li>
                 <li className="about__list-contact age-responsive">Age: <span className="about__list-span">20 years</span> </li>
-                <li className="about__list-contact">Email: <span className="about__list-span">2940cristian@gmail.com</span> </li>
-                <li className="about__list-contact">Phone: <span className="about__list-span">760-889-6247</span> </li>
+                <li className="about__list-contact">Education: <span className="about__list-span">Lambda School</span> </li>
+                <li className="about__list-contact">Hireable? <span className="about__list-span">Yes</span> </li>
               </ul>
             </div>
             <div className="about__image"><img src={profile}/></div>
@@ -206,8 +206,8 @@ class App extends Component {
               <ul>
                 <li className="about__list-contact">Name: <span className="about__list-span">Cristian Garcia</span> </li>
                 <li className="about__list-contact age-responsive">Age: <span className="about__list-span">20 years</span> </li>
-                <li className="about__list-contact">Email: <span className="about__list-span">2940cristian@gmail.com</span> </li>
-                <li className="about__list-contact">Phone: <span className="about__list-span">760-889-6247</span> </li>
+                <li className="about__list-contact">Education: <span className="about__list-span">Lambda School</span> </li>
+                <li className="about__list-contact">Hireable? <span className="about__list-span">Yes</span> </li>
               </ul>
             </div>
             {/* <div className="about__image"><img src={profile}/></div> */}
